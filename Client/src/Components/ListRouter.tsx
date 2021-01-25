@@ -1,6 +1,6 @@
 import { List, ListItem, ListItemIcon, ListItemText, Paper, makeStyles } from "@material-ui/core"
 import { Link as RouterLink, LinkProps as RouterLinkProps } from 'react-router-dom'
-import { aboutRoute, dataCellAnalysisRoute, datasetUploadRoute, fileUploadRoute, graphRoute, homeRoute, profileRoute, researchPaperAnalysisRoute, searchRoute, signInRoute, signOutRoute, signUpRoute } from '../Common/Consts/Routes'
+import { aboutRoute, adminPageRoute, dataCellAnalysisRoute, datasetUploadRoute, fileUploadRoute, graphRoute, homeRoute, profileRoute, researchPaperAnalysisRoute, searchRoute, signInRoute, signOutRoute, signUpRoute } from '../Common/Consts/Routes'
 
 import { AboutView } from "./Home/AboutView"
 import AccountBoxIcon from '@material-ui/icons/AccountBox'
@@ -15,6 +15,7 @@ import HomeIcon from '@material-ui/icons/Home'
 import HomeView from "./Home/HomeView"
 import ImageSearchIcon from '@material-ui/icons/ImageSearch'
 import InfoIcon from '@material-ui/icons/Info'
+import CommentIcon from '@material-ui/icons/Comment';
 import { ProfileView } from "./Profile/ProfileView"
 import React from 'react'
 import { ResearchPaperAnalysisView } from "./ResearchPaperAnalysis/ResearchPaperAnalysisView"
@@ -74,6 +75,7 @@ export const ListRouter = () => {
           <ListItemLink id="research-menu" to={researchPaperAnalysisRoute} primary="Research Analysis" icon={<ImageSearchIcon />} />
           <ListItemLink id="profile-menu" to={profileRoute} primary="Profile" icon={<AccountBoxIcon />} />
           <ListItemLink id="about-menu" to={aboutRoute} primary="About Databoom" icon={<InfoIcon />} />
+          <ListItemLink id="admin-menu" to={adminPageRoute} primary="Needs Review (#)" icon={<CommentIcon />} />
         </List>
       </Paper>
     </div>
