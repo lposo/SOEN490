@@ -24,6 +24,9 @@ import SearchIcon from '@material-ui/icons/Search'
 import SearchView from "./Search/SearchView"
 import SignInView from "../Components/Authentication/SignInView"
 import SignUpView from "../Components/Authentication/SignUpView"
+import AdminPageView from "./AdminPageView"
+
+
 
 interface IProps {
   id: string;
@@ -96,6 +99,7 @@ export const getRoutedViews = () => {
       <Route path={profileRoute} component={ProfileView} />
       <Route path={signInRoute} component={SignInView} />
       <Route path={signUpRoute} component={SignUpView} />
+      <Route path={adminPageRoute} component={AdminPageView} />
     </>
   )
 }
