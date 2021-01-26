@@ -1,10 +1,10 @@
 import { List, ListItem, ListItemIcon, ListItemText, Paper, makeStyles } from "@material-ui/core"
 import { Link as RouterLink, LinkProps as RouterLinkProps } from 'react-router-dom'
-import { aboutRoute, adminPageRoute, dataCellAnalysisRoute, datasetUploadRoute, fileUploadRoute, graphRoute, homeRoute, profileRoute, researchPaperAnalysisRoute, searchRoute, signOutRoute, signUpRoute } from '../Common/Consts/Routes'
+import { aboutRoute, adminPageRoute, dataCellAnalysisRoute, datasetUploadRoute, fileUploadRoute, graphRoute, homeRoute, profileRoute, researchPaperAnalysisRoute, searchRoute, signInRoute, signOutRoute, signUpRoute } from '../Common/Consts/Routes'
 
 import { AboutView } from "./Home/AboutView"
 import AccountBoxIcon from '@material-ui/icons/AccountBox'
-import AdminPageView from "./AdminPageView"
+import { AdminPageView } from "./AdminPage/AdminPageView"
 import BarChartIcon from '@material-ui/icons/BarChart'
 import CloudUploadIcon from '@material-ui/icons/CloudUpload'
 import CommentIcon from '@material-ui/icons/Comment';
@@ -17,7 +17,6 @@ import HomeIcon from '@material-ui/icons/Home'
 import HomeView from "./Home/HomeView"
 import ImageSearchIcon from '@material-ui/icons/ImageSearch'
 import InfoIcon from '@material-ui/icons/Info'
-import CommentIcon from '@material-ui/icons/Comment';
 import { ProfileView } from "./Profile/ProfileView"
 import React from 'react'
 import { ResearchPaperAnalysisView } from "./ResearchPaperAnalysis/ResearchPaperAnalysisView"
@@ -26,7 +25,6 @@ import SearchIcon from '@material-ui/icons/Search'
 import SearchView from "./Search/SearchView"
 import SignInView from "../Components/Authentication/SignInView"
 import SignUpView from "../Components/Authentication/SignUpView"
-import AdminPageView from "./AdminPageView"
 
 interface IProps {
   id: string;

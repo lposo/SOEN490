@@ -1,8 +1,9 @@
-import { Container, Box } from '@material-ui/core';
+import { Box, Container } from '@material-ui/core';
 import React, { Component } from 'react';
-import { DatasetUploadForm } from './DatasetUpload/DatasetUploadForm';
 
-export default function AdminPageView() {
+import { DatasetUploadForm } from '../DatasetUpload/DatasetUploadForm';
+
+export const AdminPageView = () => {
     return (
         <select>
             <option value="grapefruit">Dataset list</option>
