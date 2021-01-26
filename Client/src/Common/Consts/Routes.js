@@ -12,4 +12,4 @@ export const signUpRoute = '/sign-up'
 
 export const dataCellAnalysisRoute = '/dataCellAnalysis'
 export const signOutRoute = '/sign-in'
-export const adminPageRoute = '/admin-page'
+export const unapprovedDatasetsRoute = '/unapproved-datasets'

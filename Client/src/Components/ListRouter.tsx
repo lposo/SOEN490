@@ -1,6 +1,6 @@
 import { List, ListItem, ListItemIcon, ListItemText, Paper, makeStyles } from "@material-ui/core"
 import { Link as RouterLink, LinkProps as RouterLinkProps } from 'react-router-dom'
-import { aboutRoute, adminPageRoute, dataCellAnalysisRoute, datasetUploadRoute, fileUploadRoute, graphRoute, homeRoute, profileRoute, researchPaperAnalysisRoute, searchRoute, signInRoute, signOutRoute, signUpRoute } from '../Common/Consts/Routes'
+import { aboutRoute, dataCellAnalysisRoute, datasetUploadRoute, fileUploadRoute, graphRoute, homeRoute, profileRoute, researchPaperAnalysisRoute, searchRoute, signInRoute, signOutRoute, signUpRoute, unapprovedDatasetsRoute } from '../Common/Consts/Routes'
 
 import { AboutView } from "./Home/AboutView"
 import AccountBoxIcon from '@material-ui/icons/AccountBox'
@@ -24,7 +24,8 @@ import SearchIcon from '@material-ui/icons/Search'
 import SearchView from "./Search/SearchView"
 import SignInView from "../Components/Authentication/SignInView"
 import SignUpView from "../Components/Authentication/SignUpView"
-import AdminPageView from "./AdminPageView"
+import { UnapprovedDatasetView } from "./UnapprovedDatasets"
+
 
 
 
@@ -78,7 +79,7 @@ export const ListRouter = () => {
           <ListItemLink id="research-menu" to={researchPaperAnalysisRoute} primary="Research Analysis" icon={<ImageSearchIcon />} />
           <ListItemLink id="profile-menu" to={profileRoute} primary="Profile" icon={<AccountBoxIcon />} />
           <ListItemLink id="about-menu" to={aboutRoute} primary="About Databoom" icon={<InfoIcon />} />
-          <ListItemLink id="admin-menu" to={adminPageRoute} primary="Needs Review (#)" icon={<CommentIcon />} />
+          <ListItemLink id="admin-menu" to={unapprovedDatasetsRoute} primary="Needs Review (#)" icon={<CommentIcon />} />
         </List>
       </Paper>
     </div>
@@ -99,7 +100,7 @@ export const getRoutedViews = () => {
       <Route path={profileRoute} component={ProfileView} />
       <Route path={signInRoute} component={SignInView} />
       <Route path={signUpRoute} component={SignUpView} />
-      <Route path={adminPageRoute} component={AdminPageView} />
+      <Route path={unapprovedDatasetsRoute} component={UnapprovedDatasetView} />
     </>
   )
 }
