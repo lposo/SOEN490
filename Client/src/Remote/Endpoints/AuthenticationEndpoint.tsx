@@ -1,6 +1,6 @@
-import { ILoginUserModel, ISignUpUserModel } from "../../Models/Authentication/ISignUpModel"
+import { ISignInUserModel, ISignUpUserModel } from "../../Models/Authentication/ISignUpModel"
 
-import SnackbarUtils from "../../Components/Utils/SnackbarUtils"
+import SnackbarUtils from "../../Components/SnackbarUtils"
 import { post } from "../RemoteHelper"
 
 const signupRoute = '/signup'
@@ -14,7 +14,7 @@ export const callSignUp = async (signUpInfo: ISignUpUserModel): Promise<any> => 
   }
 }
 
-export const callLogIn = async (loginUser: ILoginUserModel): Promise<any> => {
+export const callLogIn = async (signInUser: ISignInUserModel): Promise<any> => {
   //server sets a token in browser cookie in http only mode
-  await post(loginRoute, loginUser)
+  await post(loginRoute, signInUser)
 }

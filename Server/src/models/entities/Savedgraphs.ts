@@ -6,7 +6,7 @@ import { Accounts } from "./Accounts";
  * The entity annotation indicates that a table is being created
  */
 @Entity()
-export class Graphstate {
+export class Savedgraphs {
 
     @PrimaryGeneratedColumn()
     id: number
@@ -62,8 +62,8 @@ export class Graphstate {
     updated: Date
 }
 
-export const selectGraphStateQuery = (connection: Connection) =>
-    connection.createQueryBuilder(Graphstate, 'graphs')
+export const selectSavedGraphsOfUserQuery = (connection: Connection, user: number) =>
+    connection.createQueryBuilder(Savedgraphs, 'graphs')
         .select('graphs.name', 'name')
         .addSelect('graphs.id', 'id')
         .addSelect('graphs.datasetIds', 'datasetIds')
@@ -75,9 +75,22 @@ export const selectGraphStateQuery = (connection: Connection) =>
         .addSelect('graphs.axisZoomStart', 'axisZoomStart')
         .addSelect('graphs.axisZoomEnd', 'axisZoomEnd')
         .addSelect('graphs.axisUnits', 'axisUnits')
+        .innerJoin(Accounts, 'accounts', 'graphs.accountId = accounts.id')
+        .where('accounts.id = :user', { user: user })
+        .getRawMany();
 
-export const selectGraphOwnerQuery = (connection: Connection, graphId: number) =>
-    connection.createQueryBuilder(Graphstate, 'graphs')
-        .select('graphs.accountId')
-        .where('graphs.id = :id', { id: graphId })
-        .getOne();
+export const selectOneSavedGraphQuery = (connection: Connection, id: number) =>
+    connection.createQueryBuilder(Savedgraphs, 'graphs')
+        .select('graphs.name', 'name')
+        .addSelect('graphs.id', 'id')
+        .addSelect('graphs.datasetIds', 'datasetIds')
+        .addSelect('graphs.datasetColors', 'datasetColors')
+        .addSelect('graphs.datasetShapes', 'datasetShapes')
+        .addSelect('graphs.datasetHiddenStatus', 'datasetHiddenStatus')
+        .addSelect('graphs.axisVariable', 'axisVariable')
+        .addSelect('graphs.axisLog', 'axisLog')
+        .addSelect('graphs.axisZoomStart', 'axisZoomStart')
+        .addSelect('graphs.axisZoomEnd', 'axisZoomEnd')
+        .addSelect('graphs.axisUnits', 'axisUnits')
+        .where('graphs.id = :id', { id: id })
+        .getRawOne();
