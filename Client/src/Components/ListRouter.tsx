@@ -15,7 +15,6 @@ import HomeIcon from '@material-ui/icons/Home'
 import HomeView from "./Home/HomeView"
 import ImageSearchIcon from '@material-ui/icons/ImageSearch'
 import InfoIcon from '@material-ui/icons/Info'
-import LoginView from "./Authentication/LoginView"
 import CommentIcon from '@material-ui/icons/Comment';
 import { ProfileView } from "./Profile/ProfileView"
 import React from 'react'
@@ -23,8 +22,9 @@ import { ResearchPaperAnalysisView } from "./ResearchPaperAnalysis/ResearchPaper
 import { Route } from 'react-router'
 import SearchIcon from '@material-ui/icons/Search'
 import SearchView from "./Search/SearchView"
+import SignInView from "../Components/Authentication/SignInView"
+import SignUpView from "../Components/Authentication/SignUpView"
 import AdminPageView from "./AdminPageView"
-import SignUpView from "./Authentication/SignUpView"
 
 
 
@@ -70,7 +70,7 @@ export const ListRouter = () => {
       <Paper elevation={0}>
         <List aria-label="main mailbox folders">
           <ListItemLink id="home-menu" to={homeRoute} primary="Home" icon={<HomeIcon />} />
-          <ListItemLink id="graph-menu" to={newGraphRoute} primary="Graph" icon={<BarChartIcon />} />
+          <ListItemLink id="graph-menu" to={graphRoute} primary="Graph" icon={<BarChartIcon />} />
           <ListItemLink id="search-menu" to={searchRoute} primary="Search" icon={<SearchIcon />} />
           <ListItemLink id="fileupload-menu" to={fileUploadRoute} primary="File Upload" icon={<CloudUploadIcon />} />
           <ListItemLink id="dataset-menu" to={datasetUploadRoute} primary="Dataset Upload" icon={<CloudUploadIcon />} />
@@ -97,7 +97,7 @@ export const getRoutedViews = () => {
       <Route path={dataCellAnalysisRoute} component={DataCellAnalysisView} />
       <Route path={aboutRoute} component={AboutView} />
       <Route path={profileRoute} component={ProfileView} />
-      <Route path={loginRoute} component={LoginView} />
+      <Route path={signInRoute} component={SignInView} />
       <Route path={signUpRoute} component={SignUpView} />
       <Route path={adminPageRoute} component={AdminPageView} />
     </>

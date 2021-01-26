@@ -48,5 +48,8 @@ export const classStyles = () => {
       justifyContent: 'center',
       overflow: 'auto',
     },
+    closeButton: {
+      float: 'right',
+    },
   })()
 }
