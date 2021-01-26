@@ -4,8 +4,10 @@ import { aboutRoute, dataCellAnalysisRoute, datasetUploadRoute, fileUploadRoute,
 
 import { AboutView } from "./Home/AboutView"
 import AccountBoxIcon from '@material-ui/icons/AccountBox'
+import { AdminPageView } from "./AdminPage/AdminPageView"
 import BarChartIcon from '@material-ui/icons/BarChart'
 import CloudUploadIcon from '@material-ui/icons/CloudUpload'
+import CommentIcon from '@material-ui/icons/Comment';
 import { DataCellAnalysisView } from "./DataCellAnalysis/DataCellAnalysisView"
 import { DatasetUploadView } from "./DatasetUpload/DatasetUploadView"
 import DonutSmallIcon from '@material-ui/icons/DonutSmall'
@@ -15,7 +17,6 @@ import HomeIcon from '@material-ui/icons/Home'
 import HomeView from "./Home/HomeView"
 import ImageSearchIcon from '@material-ui/icons/ImageSearch'
 import InfoIcon from '@material-ui/icons/Info'
-import CommentIcon from '@material-ui/icons/Comment';
 import { ProfileView } from "./Profile/ProfileView"
 import React from 'react'
 import { ResearchPaperAnalysisView } from "./ResearchPaperAnalysis/ResearchPaperAnalysisView"
@@ -24,10 +25,13 @@ import SearchIcon from '@material-ui/icons/Search'
 import SearchView from "./Search/SearchView"
 import SignInView from "../Components/Authentication/SignInView"
 import SignUpView from "../Components/Authentication/SignUpView"
+<<<<<<< HEAD
 import { UnapprovedDatasetView } from "./UnapprovedDatasets"
 
 
 
+=======
+>>>>>>> 815c778ba7f245129a7361c3ed9fb0e9d7f1f467
 
 interface IProps {
   id: string;
