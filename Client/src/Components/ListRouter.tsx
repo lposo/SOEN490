@@ -1,11 +1,13 @@
 import { List, ListItem, ListItemIcon, ListItemText, Paper, makeStyles } from "@material-ui/core"
 import { Link as RouterLink, LinkProps as RouterLinkProps } from 'react-router-dom'
-import { aboutRoute, adminPageRoute, dataCellAnalysisRoute, datasetUploadRoute, fileUploadRoute, graphRoute, homeRoute, profileRoute, researchPaperAnalysisRoute, searchRoute, signInRoute, signOutRoute, signUpRoute } from '../Common/Consts/Routes'
+import { aboutRoute, adminPageRoute, dataCellAnalysisRoute, datasetUploadRoute, fileUploadRoute, graphRoute, homeRoute, profileRoute, researchPaperAnalysisRoute, searchRoute, signOutRoute, signUpRoute } from '../Common/Consts/Routes'
 
 import { AboutView } from "./Home/AboutView"
 import AccountBoxIcon from '@material-ui/icons/AccountBox'
+import AdminPageView from "./AdminPageView"
 import BarChartIcon from '@material-ui/icons/BarChart'
 import CloudUploadIcon from '@material-ui/icons/CloudUpload'
+import CommentIcon from '@material-ui/icons/Comment';
 import { DataCellAnalysisView } from "./DataCellAnalysis/DataCellAnalysisView"
 import { DatasetUploadView } from "./DatasetUpload/DatasetUploadView"
 import DonutSmallIcon from '@material-ui/icons/DonutSmall'
@@ -25,8 +27,6 @@ import SearchView from "./Search/SearchView"
 import SignInView from "../Components/Authentication/SignInView"
 import SignUpView from "../Components/Authentication/SignUpView"
 import AdminPageView from "./AdminPageView"
-
-
 
 interface IProps {
   id: string;
